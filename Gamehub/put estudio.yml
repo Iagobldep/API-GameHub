@@ -1,17 +1,17 @@
 info:
-  name: post
+  name: put estudio
   type: http
-  seq: 1
+  seq: 7
 
 http:
-  method: POST
+  method: PUT
   url: http://localhost:3000/estudios
   body:
     type: json
     data: |-
       {
         "nome": "Bldep games",
-        "pais": "barsil"
+        "pais": "Brasil"
       }
   auth: inherit
 

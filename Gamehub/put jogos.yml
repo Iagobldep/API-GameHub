@@ -1,11 +1,19 @@
 info:
-  name: put
+  name: put jogos
   type: http
-  seq: 1
+  seq: 8
 
 http:
   method: PUT
   url: http://localhost:3000/estudios
+  body:
+    type: json
+    data: |-
+      {
+        "titulo": "Penumbra",
+        "ano_lancamento": 2025,
+        "estudio_id": 1
+      }
   auth: inherit
 
 settings:
@@ -13,4 +21,3 @@ settings:
   timeout: 0
   followRedirects: true
   maxRedirects: 5
-​
