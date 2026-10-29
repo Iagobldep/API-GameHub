@@ -1,4 +1,4 @@
-import conexao from "../../db";
+import conexao from "../../db.js";
 
 export function listar(callback) {
     const sql = "SELECT * FROM estudios ORDER BY id";
@@ -15,7 +15,7 @@ export function criar(dados, callback) {
     conexao.query(sql, [dados.nome, dados.pais], callback)
 }
 
-export function atualizar(id, callback) {
+export function atualizar(id, dados, callback) {
     const sql = "UPDATE estudios SET nome = ?, pais = ? WHERE id = ?";
     conexao.query(sql, [dados.nome, dados.pais, id], callback)
 }
