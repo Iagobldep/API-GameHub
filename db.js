@@ -1,5 +1,8 @@
-require("dotenv").config();
-const mysql = require("mysql2");
+// require("dotenv").config();
+// const mysql = require("mysql2");
+
+import "dotenv/config";
+import mysql from "mysql2";
 
 const conexao = mysql.createConnection({
     host: process.env.DB_HOST || "localhost",
@@ -9,4 +12,5 @@ const conexao = mysql.createConnection({
     port: process.env.DB_PORT || 3306
 });
 
-module.exports = conexao;
+// module.exports = conexao;
+export default conexao;
